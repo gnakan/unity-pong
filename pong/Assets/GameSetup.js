@@ -31,4 +31,5 @@ function Start () {
 	//Move the players to a fixed distance from the edges of the screen:
 	Player01.position.x = mainCam.ScreenToWorldPoint (new Vector3 (75f, 0f, 0f)).x;
 	Player02.position.x = mainCam.ScreenToWorldPoint (new Vector3 (Screen.width -75f, 0f, 0f)).x;
+
 }
