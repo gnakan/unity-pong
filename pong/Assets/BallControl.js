@@ -9,12 +9,13 @@ function Start ()
 	GoBall();
 }
 
-
+//check if the ball hit's a player's paddle
 function OnCollisionEnter2D (colInfo : Collision2D) 
 {
-	
 	if (colInfo.collider.tag == "Player") {
 		rigidbody2D.velocity.y = rigidbody2D.velocity.y/2 + colInfo.collider.rigidbody2D.velocity.y/3;
+		audio.pitch = Random.Range(0.8f, 1.2f);
+		audio.Play();
 	}
 }
 
