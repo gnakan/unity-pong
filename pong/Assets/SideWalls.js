@@ -6,5 +6,6 @@ function OnTriggerEnter2D (hitInfo : Collider2D)
 	{
 		var wallName = transform.name;
 		GameManager.Score (wallName);
+		hitInfo.gameObject.SendMessage("ResetBall"); //string is the function from BallControl
 	}
 }
